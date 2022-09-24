@@ -18,14 +18,14 @@
                 <div class="col-md-6 col-xl-7">
 
                   <div class="text-center pt-md-5 pb-5 my-md-5" style="padding-right: 24px;">
-                    <i class="fas fa-laptop" style="color: #D6D6D6;"></i>
+                    <i class="bi bi-laptop" style="color: #D6D6D6; font-size: 18rem;"></i>
                   </div>
 
                 </div>
                 <div class="col-md-6 col-xl-4 text-center">
 
                   <h2 class="fw-bold mb-4 pb-2">IT Conference Login</h2>
-
+                <form action="">
                   <div class="form-outline mb-3">
                     <input type="email" id="typeEmail" class="form-control form-control-lg" />
                     <label class="form-label" for="typeEmail">Email</label>
@@ -39,9 +39,9 @@
                   <div class="text-center">
                     <button class="btn btn-info btn-block btn-lg" type="submit">Login</button>
                     <p class="small mt-3 mb-4 text-muted">Forgot <span class="fw-bold"><a href="#!" class="text-muted">Username</a> / <a href="#!" class="text-muted">Password</a>?</span></p>
-                    <a href="#!" class="link-info">Create your Account <i class="fas fa-long-arrow-alt-right"></i></a>
+                    <a href="#!" class="link-info">Create your Account <i class="bi bi-arrow-right"></i></a>
                   </div>
-
+                </form>
                 </div>
               </div>
 
