@@ -30,8 +30,14 @@
                             <a class="nav-link fs-5" href="viewAttendeeRecords.php">View Attendees</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link  fs-5" aria-current="page"
+                                href="login.php">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </nav>
     </header>
     <br/>
