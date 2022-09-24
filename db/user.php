@@ -46,7 +46,20 @@
 
         public function getUserByUserName($username)
         {
-            
+           try
+            {
+                $sql = "SELECT COUNT(*) AS num FROM user WHERE username = :username";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(":username",$username);
+
+                $stmt->execute();
+                return $stmt->fetch();
+                
+            } catch (PDOException $exc) 
+            {
+                echo $exc->getMessage();
+                return false;
+            } 
         }
    } 
 ?>
