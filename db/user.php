@@ -13,12 +13,21 @@
         {
             try
             {
-             $sql = "INSERT INTO `user`(username, password)
-                VALUES (:username,:password)";
-             $stmt = $this->db->prepare($sql);
-             $stmt->bindparam(":username",$username);
-             $stmt->bindparam(":password",$password);
-             $stmt->execute();
+                $doesUserExist = $this->getUserByUserName($username);
+                if($doesUserExist["num"] > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    $hash_password = password_hash($password. $username,PASSWORD_DEFAULT);
+                    $sql = "INSERT INTO `user`(username, password)
+                        VALUES (:username,:password)";
+                    $stmt = $this->db->prepare($sql);
+                    $stmt->bindparam(":username",$username);
+                    $stmt->bindparam(":password",$hash_password);
+                    $stmt->execute();
+                }
             } catch(PDOException $exc)
             {
                 echo $exc->getMessage();

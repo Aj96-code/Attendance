@@ -28,8 +28,10 @@
     };
 
     require_once("crud.php");
+    require_once("user.php");
 
     $crud = new CRUD($pdo);
+    $user = new User($pdo);
     
 
 ?>
