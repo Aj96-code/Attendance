@@ -53,20 +53,20 @@
         <div class="row row-cols-auto">
             <div class="col">
                 <a href="viewAttendeeRecords.php"
-                class=" btn btn-outline-info fw-semibold ">
+                class=" btn btn-outline-info fw-bold fs-6">
                     Back to List View
                 </a>
             </div>
             <div class="col">
                 <a href=<?php echo "edit.php?id=".$result["attendee_id"] ?>
-                class="btn btn-outline-warning">
+                class="btn btn-outline-warning fw-bold fs-6">
                     Edit Attendee Information
                 </a>
             </div>
                 <div class="col">
                 <a onclick ="return confirm('Are sure you want to delete this record')" 
                     href=<?php echo "delete.php?id=".$result["attendee_id"] ?>
-                class="btn btn-outline-danger"> 
+                class="btn btn-outline-danger fw-bold fs-6"> 
                     Delete Attendee Information
                 </a>
             </div>

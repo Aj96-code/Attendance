@@ -77,7 +77,7 @@
     </form>
     <br/>
     <a href="viewAttendeeRecords.php"
-    class=" btn btn-outline-info fw-semibold ">
+    class=" btn btn-outline-dark fw-bold ">
         Back to List View
     </a>
             
