@@ -9,7 +9,7 @@
             $this->db = $conn;
         }
 
-        public function insertUser($username,$password)
+        public function insertUser(string $username,string $password)
         {
             try
             {
