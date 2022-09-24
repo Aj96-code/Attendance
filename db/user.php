@@ -43,5 +43,10 @@
                 return false;
             }
         }
+
+        public function getUserByUserName($username)
+        {
+            
+        }
    } 
 ?>
