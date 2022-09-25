@@ -1,5 +1,5 @@
 <?php
-   /* //dev connection
+    //dev connection
     $host = "127.0.0.1";
     $db = "attendance";
     $user = "root";
@@ -7,8 +7,8 @@
     $charset = "utf8mb4";
     //* data source name
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-    */
     
+    /*
     //remote connection
     $host ="sql5.freesqldatabase.com";
     $db = "sql5521882";
@@ -16,7 +16,7 @@
     $password = "RaLPldAeMf";
     $charset = "utf8mb4";
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-    try
+    */try
     {
         $pdo = new PDO($dsn,$user,$password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
