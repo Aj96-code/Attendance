@@ -20,7 +20,7 @@
                 }
                 else
                 {
-                    $hash_password = password_hash($password. $username,PASSWORD_DEFAULT);
+                    $hash_password = md5($password. $username);
                     $sql = "INSERT INTO `user`(username, password)
                         VALUES (:username,:password)";
                     $stmt = $this->db->prepare($sql);
@@ -45,7 +45,7 @@
                 $stmt->bindparam(":username", $username);
                 $stmt->bindparam(":password", $password);
                 $stmt->execute();
-                return true;
+                return $stmt->fetch();
             } catch (PDOException $exc) 
             {
                 echo $exc->getMessage();

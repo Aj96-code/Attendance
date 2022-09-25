@@ -34,8 +34,18 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
+                            <?php
+                                if(!isset($_SESSION["userId"]))
+                                { 
+                            ?>
+
                             <a class="nav-link  fs-5" aria-current="page"
                                 href="login.php">Login</a>
+                            <?php } else {?>
+                            <span>Hello <?php echo $_SESSION["username"];?></span>
+                             <a class="nav-link  fs-5" aria-current="page"
+                                href="logout.php">LogOut</a>      
+                            <?php }?>
                         </li>
                     </ul>
                 </div>
