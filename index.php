@@ -57,6 +57,12 @@
                 </div>
             </div>
         </div>
+        <div class="form-group">
+            <input type="file" accept="image/*" class="form-control" id="avatar" name="avatar" aria-describedby="fileWarning"/>
+              <div id="fileWarning" class="form-text">
+                    File Upload is Optional
+              </div>
+        </div>
         <div class="d-grid">
             <button type="submit" name="submit" class="btn btn-primary btn-lg fw-semibold">Submit</button>
         </div>

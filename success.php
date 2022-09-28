@@ -13,6 +13,13 @@
         $contactNumber = $_POST["contactNumber"];
         $specialty = $_POST["specialty"];
 
+        $origin_file = $_FILES["avatar"]["name"];
+        $target_dir = "uploads/";
+        $destination = $target_dir . basename($_FILES["avatar"]["name"]);
+        move_uploaded_file($origin_file,$destination);
+
+        exit();
+
         $isSuccess = $crud->insertAttendees(
             $firstName, $lastName,$dob,$email,
             $contactNumber,$specialty
