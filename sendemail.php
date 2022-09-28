@@ -6,7 +6,7 @@ use SendGrid\Mail\Mail;
     {
         public static function SendMail($to,$subject,$content)
         {
-            $key = "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";
+            //$key = "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";
             
             $email  = new \SendGrid\Mail\Mail();
             $email->setFrom("thompsonAziel0@gmail.com","Aziel Thompson");
