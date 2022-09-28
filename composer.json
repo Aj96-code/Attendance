@@ -1,3 +1,6 @@
 {
     
+    "require": {
+        "sendgrid/sendgrid": "^8.0"
+    }
 }

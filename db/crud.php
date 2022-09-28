@@ -100,7 +100,7 @@
                 return true;
             } catch(PDOException $exc)
             {
-
+ 
                 echo $exc->getMessage();
                 return false;
             }
@@ -127,6 +127,23 @@
             { 
                 $sql = "SELECT * FROM `specialties`";
                 return $this->db->query($sql);
+            } catch (PDOException $exc)
+            {
+                echo $exc->getMessage();
+                return false;
+            }
+        }
+
+        public function getSpecialtyById(int $id)
+        {
+            try
+            {
+                $sql = "SELECT * FROM `specialties` WHERE specialty_id = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(":id",$id);
+                $stmt->execute();
+                return $stmt->fetch();
+
             } catch (PDOException $exc)
             {
                 echo $exc->getMessage();
