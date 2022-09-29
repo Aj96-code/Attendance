@@ -15,7 +15,7 @@
         $attendeeInformation = $crud->getAttendeeDetails($id);
  ?>
 <h1 class="text-center">Edit Attendee Information</h1>
-<form action="editPost.php" method="post">
+<form action="editPost.php" method="post" enctype="multipart/form-data">
     <input type = "hidden" name="id" value="<?php echo $attendeeInformation["attendee_id"]; ?>"/>
         <div class="row mb-3">
             <div class="col">
@@ -71,6 +71,13 @@
                     We'll never share your number with anyone else.
                 </div>
             </div>
+        </div>
+         <div class="mb-3">
+            <input class="form-control" type="file" name="avatar" id="avatar" 
+                 aria-describedby="fileWarning"/>
+              <div id="fileWarning" class="form-text">
+                    File Upload is Optional
+              </div>
         </div>
         <div class="d-grid">
             <button type="submit" name="submit" class="btn btn-success btn-lg fw-semibold">Save Changes</button>

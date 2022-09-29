@@ -80,7 +80,7 @@
 
         public function editAttendee(
             $id,$firstName,$lastName,$dob,$email,
-            $contactNumber,$specialty
+            $contactNumber,$specialty,$avatarPath
         )
         {
             try
@@ -88,7 +88,7 @@
                 $sql ="UPDATE `attendee` SET`first_name`= :firstName ,
                 `last_name`= :lastName ,`date_of_birth`= :dob ,
                 `email_address`= :email ,`contact_number`= :contactNumber ,
-                `specialty_id`= :specialty  WHERE attendee_id =:id" ;
+                `specialty_id`= :specialty, `avatar_path`= :avatarPath  WHERE attendee_id =:id" ;
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(":id",$id);
                 $stmt->bindparam(":firstName",$firstName);
@@ -97,6 +97,7 @@
                 $stmt->bindparam(":email",$email);
                 $stmt->bindparam(":contactNumber",$contactNumber);
                 $stmt->bindparam(":specialty",$specialty);
+                $stmt->bindparam(":avatarPath",$avatarPath);
                 $stmt->execute();
                 return true;
             } catch(PDOException $exc)

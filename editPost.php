@@ -8,10 +8,15 @@
         $email = $_POST["email"];
         $contactNumber = $_POST["contactNumber"];
         $specialty = $_POST["specialty"];
+        $origin_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION);
+        $target_dir = "uploads/";
+        $destination = $target_dir . $contactNumber. "." .$ext;
+        move_uploaded_file($origin_file,$destination);
 
         $isSuccess = $crud->editAttendee(
             $id,$firstName, $lastName,$dob,$email,
-            $contactNumber,$specialty
+            $contactNumber,$specialty,$destination
         ); 
 
         if($isSuccess)
