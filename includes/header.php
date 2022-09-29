@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <title><?php echo "Attendance - $title"?></title>
 </head>
-<body>
+<body >
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
@@ -53,5 +53,5 @@
         </nav>
     </header>
     <br/>
-    <main>
-        <div class="container">
+    <main class=" d-flex flex-column bd-main order-1" style="min-height: 75vh;">
+        <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">

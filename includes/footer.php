@@ -1,6 +1,7 @@
         </div>
     </main>
-    <footer class="p-3  bg-primary text-white fixed-bottom">
+    
+    <footer class="bd-footer  text-white py-4 py-md-5 mt-auto bg-primary">
         <p class="text-center">
             <?php echo "Copy right &copy" ." - IT Conference Attendance System 20".date("y")?>
         </p>
