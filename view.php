@@ -23,8 +23,8 @@
             <h5 class="my-3"><?php echo  $result["first_name"] . "" .$result["last_name"]?></h5>
             <p class="text-muted mb-1"><?php echo $result["name"]?></p>
             <p class="text-muted mb-4">
-                <?php  echo "<strong>Email</strong>:". $result["email_address"]
-                .", <strong>Phone Number</strong>:". $result["contact_number"]."?>";
+                <?php  echo "<strong>Email</strong>: ". $result["email_address"]
+                .", <strong>Phone Number</strong>: ". $result["contact_number"];
                 ?>
             </p>
           </div>
