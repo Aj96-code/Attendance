@@ -15,7 +15,7 @@
     */
 ?>
     <h1 class=" text-center">Registration for IT Conference</h1>
-    <form action="success.php" method="post">
+    <form action="success.php" method="post" enctype="multipart/form-data">
         <div class="row mb-3">
             <div class="col">
                 <label for="firstName" class="form-label"> First Name</label>
@@ -57,8 +57,9 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <input type="file" accept="image/*" class="form-control" id="avatar" name="avatar" aria-describedby="fileWarning"/>
+        <div class="mb-3">
+            <input class="form-control" type="file" name="avatar" id="avatar" 
+                 aria-describedby="fileWarning"/>
               <div id="fileWarning" class="form-text">
                     File Upload is Optional
               </div>

@@ -13,42 +13,22 @@
         $id = $_GET["id"];
         $result = $crud->getAttendeeDetails($id);
 ?>
-    <div class="card col-12">
-        <div class="card-body">
-            <h5 class="card-title">
-                <?php
-                    echo $result["first_name"]. " ".
-                         $result["last_name"]; 
+  
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img src="<?php echo empty($result["avatar_path"]) ?"./uploads/default.png": $result["avatar_path"] ?>" alt="avatar"
+              class="rounded img-fluid" style="width: 35%;">
+            <h5 class="my-3"><?php echo  $result["first_name"] . "" .$result["last_name"]?></h5>
+            <p class="text-muted mb-1"><?php echo $result["name"]?></p>
+            <p class="text-muted mb-4">
+                <?php  echo "<strong>Email</strong>:". $result["email_address"]
+                .", <strong>Phone Number</strong>:". $result["contact_number"]."?>";
                 ?>
-            </h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-                <strong>Specialty:</strong> 
-                <?php 
-                    echo " ".$result["name"];
-                ?>
-            </h6>
-            <h6 class="card-subtitle mb-2 text-muted">
-                <strong>Date of Birth: </strong>
-                <?php 
-                    echo " ".$result["date_of_birth"];
-                ?>
-            </h6>
-            <h6 class="card-subtitle mb-2 text-muted">
-                <strong>Email:</strong>
-                <?php
-                    echo " ".$result["email_address"];
-                ?>
-
-            </h6>
-            <h6 class="card-subtitle mb-2 text-muted">
-                <strong>Contact Number:</strong>
-                <?php
-                    echo " ".$result["contact_number"];
-                ?>
-
-            </h6>
+            </p>
+          </div>
         </div>
-    </div>
     <br/>
     <div class="d-flex justify-content-center">
         <div class="row row-cols-auto">

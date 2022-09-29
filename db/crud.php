@@ -10,18 +10,18 @@
 
         public function insertAttendees (
             $firstName,$lastName,$dob,$email,
-            $contactNumber,$specialty
+            $contactNumber,$specialty,$avatarPath
         )
         {
             try {
                 //* Define the sql to be executed
                 $sql = "INSERT INTO attendee(
                     first_name,last_name,date_of_birth,email_address,
-                    contact_number,specialty_id
+                    contact_number,specialty_id,avatar_path
                 ) 
                 VALUES (
                     :firstName,:lastName,:dob,:email,
-                    :contactNumber,:specialty
+                    :contactNumber,:specialty,:avatarPath
                 )";
                 //* Prepare the sql statement to be executed
                 $stmt = $this->db->prepare($sql);
@@ -32,6 +32,7 @@
                 $stmt->bindparam(":email",$email);
                 $stmt->bindparam(":contactNumber",$contactNumber);
                 $stmt->bindparam(":specialty",$specialty);
+                $stmt->bindparam(":avatarPath", $avatarPath);
                 //* Execute the statement
                 $stmt->execute();
                 return true;
