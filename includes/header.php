@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md bg-primary">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand fs-4 fw-semibold" href="index.php">IT Conference</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
                             <a class="nav-link  fs-5" aria-current="page"
                                 href="login.php">Login</a>
                             <?php } else {?>
-                            <span>Hello <?php echo $_SESSION["username"];?></span>
+                            <span class="text-white">Hello <?php echo $_SESSION["username"];?></span>
                              <a class="nav-link  fs-5" aria-current="page"
                                 href="logout.php">LogOut</a>      
                             <?php }?>

@@ -1,7 +1,9 @@
         </div>
     </main>
-    <footer class="container d-flex fixed-bottom">
-        <?php echo "Copy right &copy" ." - ".date("y")?>
+    <footer class="p-3  bg-primary text-white fixed-bottom">
+        <p class="text-center">
+            <?php echo "Copy right &copy" ." - IT Conference Attendance System 20".date("y")?>
+        </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- JavaScript Bundle with Popper -->
