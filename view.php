@@ -20,7 +20,7 @@
           <div class="card-body text-center">
             <img src="<?php echo empty($result["avatar_path"]) ?"./uploads/default.png": $result["avatar_path"] ?>" alt="avatar"
               class="rounded img-fluid" style="width: 35%;">
-            <h5 class="my-3"><?php echo  $result["first_name"] . "" .$result["last_name"]?></h5>
+            <h5 class="my-3"><?php echo  $result["first_name"] . " " .$result["last_name"]?></h5>
             <p class="text-muted mb-1"><?php echo $result["name"]?></p>
             <p class="text-muted mb-4">
                 <?php  echo "<strong>Email</strong>: ". $result["email_address"]
