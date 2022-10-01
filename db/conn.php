@@ -10,10 +10,10 @@
     
     */
     //remote connection
-    $host ="sql5.freesqldatabase.com";
-    $db = "sql5521882";
-    $user = "sql5521882";
-    $password = "RaLPldAeMf";
+    $host ="sql.freedb.tech";
+    $db = "freedb_aj96codedb";
+    $user = "freedb_freedb_aj96codedb";
+    $password = "FA5FNpf&geJXV$2";
     $charset = "utf8mb4";
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
     try
