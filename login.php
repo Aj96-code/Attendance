@@ -26,7 +26,7 @@
                         {
                             $username = strtolower(trim($_POST["username"])); 
                             $password = $_POST["password"]; 
-                            $hash_password = md5($password.$username);
+                            $hash_password = md5($username.$password);
                             $doesUserExist = $user->getUser($username,$hash_password);
                         
                             if($doesUserExist == false)
