@@ -20,7 +20,7 @@
                 }
                 else
                 {
-                    $hash_password = md5($password. $username);
+                    $hash_password = md5($username. $password);
                     $sql = "INSERT INTO `user`(username, password)
                         VALUES (:username,:password)";
                     $stmt = $this->db->prepare($sql);
