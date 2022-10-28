@@ -40,7 +40,7 @@
                                 </a>
                             </div>
                                 <div class="col">
-                                <a onclick ="return confirm('Are sure you want to delete this record')" 
+                                <a onclick ="return confirm('Are you sure you want to delete this record')" 
                                     href=<?php echo "delete.php?id=".$obj["attendee_id"] ?>
                                 class="btn btn-danger"> 
                                     Delete
